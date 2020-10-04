@@ -1,0 +1,37 @@
+---
+title: "firstRMarkdown"
+author: "Ziming-Xu"
+date: "2020/10/4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Wave plot
+```{r}
+x <- seq(0,20,0.01)
+y <- c(sin(x))
+
+sin_df <- data.frame(x,y)
+
+head(sin_df, 10)
+```
+
+## including plots
+```{r, echo=FALSE}
+plot(x,y)
+```
+
+## Replicability and reproducibility
+The following text is excerpted from the subtitle of teacher Henry's lecture 2.
+
+Replicability refers to whether or not different experimenters will yield the 
+same results from different data when an experiment is repeated under similar
+conditions. 
+
+Reproducibility, on the other hand, refers to whether or not different scientists 
+will yield the same results by repeating the analysis on the same data. 
+
+Hence reproducibility is a more modest goal than replicability. 
